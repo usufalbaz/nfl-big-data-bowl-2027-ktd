@@ -19,11 +19,11 @@ Every spring, NFL front offices invest millions of dollars in draft capital base
 ### 1. Combine Kinematic Extraction (The Isolated Cut)
 Focusing on isolated movement primitives (e.g., 90° cuts during `SPEED_OUT` routes), we extract kinematic inflection points at 10 Hz:
 
-$$\Delta S_{\text{Combine}} = S_{\text{max}} - S_{\text{cut\_min}}$$
+$$\Delta S_{\text{Combine}} = S_{\mathrm{max}} - S_{\mathrm{cut}}$$
 
 Where:
-* $S_{\text{max}}$ is the prospect's peak entry velocity (yards/second).
-* $S_{\text{cut\_min}}$ is the instantaneous minimum velocity at the apex of the route break.
+* $S_{\mathrm{max}}$ is the prospect's peak entry velocity (yards/second).
+* $S_{\mathrm{cut}}$ is the instantaneous minimum velocity at the apex of the route break.
 
 ### 2. In-Game Operational Translation
 In regular-season games, receivers execute identical route concepts (`OUT` routes) under physical load (pads, helmet) and defensive press/man coverage:
@@ -53,6 +53,7 @@ Where:
 ---
 
 ## 📁 Project Repository Architecture
+```text
 data/
 └── ktd_wr_metrics.csv       # Extracted kinematic dataset (106 prospects)
 src/
@@ -63,6 +64,7 @@ notebooks/
 requirements.txt             # Environment dependencies
 LICENSE                      # MIT Open Source License
 README.md                    # Project documentation
+```
 
 ---
 
